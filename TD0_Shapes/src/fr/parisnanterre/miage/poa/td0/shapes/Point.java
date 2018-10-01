@@ -1,5 +1,5 @@
-package com.shapes;
-
+package fr.parisnanterre.miage.poa.td0.shapes;
+/*
 public class Point extends Shape2D{
     private int x,y;
 
@@ -57,3 +57,4 @@ public class Point extends Shape2D{
         return 0;
     }
 }
+*/

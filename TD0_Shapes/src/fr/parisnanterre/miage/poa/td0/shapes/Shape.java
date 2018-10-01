@@ -1,4 +1,4 @@
-package com.shapes;
+package fr.parisnanterre.miage.poa.td0.shapes;
 
 public abstract class Shape {
     private String nom;

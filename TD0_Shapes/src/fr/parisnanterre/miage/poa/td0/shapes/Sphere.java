@@ -1,5 +1,5 @@
-package com.shapes;
-
+package fr.parisnanterre.miage.poa.td0.shapes;
+/*
 public class Sphere extends Shape3D {
 
     private final double radius = 0;
@@ -15,3 +15,4 @@ public class Sphere extends Shape3D {
 
     }
 }
+*/

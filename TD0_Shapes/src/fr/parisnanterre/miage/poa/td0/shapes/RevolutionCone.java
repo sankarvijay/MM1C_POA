@@ -1,5 +1,5 @@
-package com.shapes;
-
+package fr.parisnanterre.miage.poa.td0.shapes;
+/*
 public class RevolutionCone extends Shape3D{
 
     public final double height=0;
@@ -21,3 +21,4 @@ public class RevolutionCone extends Shape3D{
 
     }
 }
+*/

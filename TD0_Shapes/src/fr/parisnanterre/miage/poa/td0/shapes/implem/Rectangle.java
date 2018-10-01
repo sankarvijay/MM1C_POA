@@ -1,15 +1,14 @@
-package com.shapes;
+package fr.parisnanterre.miage.poa.td0.shapes.implem;
+
+import fr.parisnanterre.miage.poa.td0.shapes.Shape2D;
 
 public class Rectangle extends Shape2D {
 
     private double length,width;
 
-    public Rectangle() {
-        this.width = 1;
-        this.length = 1;
-    }
 
-    public Rectangle(double l, double w) {
+    public Rectangle(double l, double w, Point2D refPoint) {
+        super(refPoint);
         this.length = l;
         this.width = w;
     }
