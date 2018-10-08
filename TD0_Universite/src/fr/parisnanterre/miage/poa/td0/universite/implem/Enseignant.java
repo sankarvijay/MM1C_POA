@@ -4,7 +4,7 @@ import fr.parisnanterre.miage.poa.td0.universite.api.IPersonnel;
 
 import java.util.Date;
 
-public class Enseignant extends Personnel implements IPersonnel {
+public abstract class Enseignant extends Personnel implements IPersonnel {
     private Date recutementDate;
     private double salaire;
 

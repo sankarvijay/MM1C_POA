@@ -2,7 +2,7 @@ package fr.parisnanterre.miage.poa.td0.universite.implem;
 
 import java.util.Date;
 
-public class EnseignantTemporaire extends Enseignant {
+public abstract class EnseignantTemporaire extends Enseignant {
     private Date depart;
 
     public EnseignantTemporaire(String nom, String prenom, String numSecu, Date depart) {

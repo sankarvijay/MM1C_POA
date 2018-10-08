@@ -1,9 +1,9 @@
 package fr.parisnanterre.miage.poa.td0.universite.implem;
 
-public class EnseignantPermanent extends Enseignant {
+public abstract class EnseignantPermanent extends Enseignant {
     private String domaineRecherche;
 
-    protected EnseignantPermanent(String nom, String prenom, String numSecu, String domaineRecherche) {
+    public EnseignantPermanent(String nom, String prenom, String numSecu, String domaineRecherche) {
         super(nom, prenom, numSecu);
         this.domaineRecherche = domaineRecherche;
     }
