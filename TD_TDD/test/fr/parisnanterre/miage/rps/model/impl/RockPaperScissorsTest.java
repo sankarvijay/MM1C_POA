@@ -36,7 +36,10 @@ public class RockPaperScissorsTest {
     @DataProvider(name="winData")
     public Object[][] createWinData() {
 
-        return new Object[][]{{RPSEnum.PAPER, RPSEnum.ROCK}};
+        return new Object[][]{{RPSEnum.PAPER, RPSEnum.ROCK},
+                {RPSEnum.ROCK, RPSEnum.SCISSORS},{
+            RPSEnum.SCISSORS,RPSEnum.PAPER
+        }};
     }
     @Test ( dataProvider = "winData")
     public void testWinPlay(RPSEnum p1, RPSEnum p2){
@@ -48,7 +51,7 @@ public class RockPaperScissorsTest {
     @DataProvider(name="tieData")
     public Object[][] createTieData() {
 
-        return new Object[][]{{RPSEnum.ROCK, RPSEnum.ROCK}};
+        return new Object[][]{{RPSEnum.ROCK, RPSEnum.ROCK},{RPSEnum.SCISSORS,RPSEnum.SCISSORS},{RPSEnum.PAPER,RPSEnum.PAPER}};
     }
     @Test ( dataProvider = "tieData")
     public void testTiePlay(RPSEnum p1, RPSEnum p2){
@@ -60,7 +63,7 @@ public class RockPaperScissorsTest {
 
     @DataProvider(name="lostData")
     public Object[][] createLostData() {
-        return new Object[][]{{RPSEnum.SCISSORS, RPSEnum.ROCK}};
+        return new Object[][]{{RPSEnum.SCISSORS, RPSEnum.ROCK},{RPSEnum.ROCK,RPSEnum.PAPER},{RPSEnum.PAPER,RPSEnum.SCISSORS}};
     }
     @Test ( dataProvider = "lostData")
     public void testLostPlay(RPSEnum p1, RPSEnum p2){
