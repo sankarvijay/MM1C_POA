@@ -13,9 +13,9 @@ public class RockPaperScissors {
 
         if(p1.equals(RPSEnum.ROCK) && p2.equals(RPSEnum.SCISSORS)){
             return Result.WIN;
-        }else if(p1.equals(RPSEnum.PAPER) && p2.equals(RPSEnum.PAPER)){
+        }else if(p1.equals(RPSEnum.ROCK) && p2.equals(RPSEnum.ROCK)){
             return Result.TIE;
-        }else if(p1.equals(RPSEnum.PAPER) && p2.equals(RPSEnum.SCISSORS)){
+        }else if(p1.equals(RPSEnum.SCISSORS) && p2.equals(RPSEnum.ROCK)){
             return Result.LOST;
         }
 

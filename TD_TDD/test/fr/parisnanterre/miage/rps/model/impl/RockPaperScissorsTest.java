@@ -1,10 +1,7 @@
 package fr.parisnanterre.miage.rps.model.impl;
 
 import fr.parisnanterre.miage.rps.model.api.RPSEnum;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import static fr.parisnanterre.miage.rps.model.api.Result.LOST;
 import static fr.parisnanterre.miage.rps.model.api.Result.TIE;
@@ -36,22 +33,37 @@ public class RockPaperScissorsTest {
     //@Parameters({ "paper" ,"rock" })
     //@Test
 
-    @Test ( dataProvider = "winData ")
-    public void testWinPlay(String p1, String p2){
-        assertEquals(game.play(RPSEnum.valueOf(p1), RPSEnum.valueOf(p2)),WIN);
+    @DataProvider(name="winData")
+    public Object[][] createWinData() {
+
+        return new Object[][]{{RPSEnum.PAPER, RPSEnum.ROCK}};
+    }
+    @Test ( dataProvider = "winData")
+    public void testWinPlay(RPSEnum p1, RPSEnum p2){
+        assertEquals(game.play(p1,p2),WIN);
     }
 
     //@Parameters({ "paper" ,"paper" })
     //@Test
-    @Test ( dataProvider = "TieData ")
-    public void testTiePlay(String p1, String p2){
-        assertEquals(game.play(RPSEnum.valueOf(p1), RPSEnum.valueOf(p2)),TIE);
+    @DataProvider(name="tieData")
+    public Object[][] createTieData() {
+
+        return new Object[][]{{RPSEnum.ROCK, RPSEnum.ROCK}};
+    }
+    @Test ( dataProvider = "tieData")
+    public void testTiePlay(RPSEnum p1, RPSEnum p2){
+        assertEquals(game.play(p1,p2),TIE);
     }
 
     //@Parameters({ "paper" ,"scissors" })
     //@Test
-    @Test ( dataProvider = "LostData ")
-    public void testLostPlay(String p1, String p2){
-        assertEquals(game.play(RPSEnum.valueOf(p1), RPSEnum.valueOf(p2)),LOST);
+
+    @DataProvider(name="lostData")
+    public Object[][] createLostData() {
+        return new Object[][]{{RPSEnum.SCISSORS, RPSEnum.ROCK}};
+    }
+    @Test ( dataProvider = "lostData")
+    public void testLostPlay(RPSEnum p1, RPSEnum p2){
+        assertEquals(game.play(p1, p2),LOST);
     }
 }
