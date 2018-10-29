@@ -31,6 +31,15 @@ public class RockPaperScissors {
         }
 
     }
+    //Not Finish
+    public Result play(Player p1, Player p2){
+        int i=0;
+        while(i==10){
+            play(RPSEnum.ROCK,RPSEnum.SCISSORS);
+            i++;
+        }
+        return LOST;
+    }
 
 
 

@@ -3,6 +3,9 @@ package fr.parisnanterre.miage.rps.model.impl;
 import fr.parisnanterre.miage.rps.model.api.RPSEnum;
 import org.testng.annotations.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static fr.parisnanterre.miage.rps.model.api.Result.LOST;
 import static fr.parisnanterre.miage.rps.model.api.Result.TIE;
 import static fr.parisnanterre.miage.rps.model.api.Result.WIN;
@@ -12,15 +15,20 @@ public class RockPaperScissorsTest {
     //setUp et tearDown permet de tester avant et apres l'execution
 
     RockPaperScissors game;
+    List<RPSEnum> liste;
+
 
     @BeforeMethod
     public void setUp()  throws Exception{
         game=new RockPaperScissors();
+        liste = new ArrayList<RPSEnum>();
+
     }
 
     @AfterMethod
     public void tearDown() throws Exception {
         game=null;
+        liste=null;
     }
 
     @Test
